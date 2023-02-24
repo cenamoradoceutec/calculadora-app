@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local ="clr-namespace:calculadora.ViewModel"
+             x:Class="calculadora.MainPage">
+
+    <ContentPage.BindingContext>
+        <local:ViewModelCalculadora></local:ViewModelCalculadora>
+    </ContentPage.BindingContext>
+
+    <StackLayout>
+        <Frame BackgroundColor="#2B3467" Padding="24" CornerRadius="0"   >
+            <Label Text="Mi Primer Proyecto Movíl" HorizontalTextAlignment="Center" TextColor="#BAD7E9" FontSize="36"/>
+        </Frame>
+        <Label Text="Ingrese primero numero"></Label>
+        <Entry Text="{Binding Num1}" Keyboard="Numeric" ></Entry>
+        <Label Text="Ingrese segundo numero"></Label>
+        <Entry Text="{Binding Num2}" Keyboard="Numeric" ></Entry>
+
+        <Button Command="{Binding Sumar}" Text="Sumar"></Button>
+        
+        <Button Command="{Binding Restar}" Text="Restar"></Button>
+        <Button Command="{Binding Dividir}" Text="Dividir"></Button>
+        <Button Command="{Binding Multiplicar}" Text="Multiplicar"></Button>
+        
+        <Label Text="{Binding Mensaje}"></Label>
+        
+    </StackLayout>
+
+</ContentPage>
